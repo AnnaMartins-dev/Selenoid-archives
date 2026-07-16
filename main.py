@@ -1,5 +1,3 @@
-import os
-from pathlib import Path
 from urllib.parse import quote
 
 import time

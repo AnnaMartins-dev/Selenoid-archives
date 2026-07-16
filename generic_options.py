@@ -19,8 +19,8 @@ def add_selenoid_options(
     page_load_strategy: str = "none",
     download_dir: str = "/home/selenium/Downloads",
     extension_path: Optional[str | Path] = None,
-    use_safe_network_flags: bool = True,
-    use_automation_flags: bool = True,
+    use_safe_network_flags: bool = False,
+    use_automation_flags: bool = False,
     accept_insecure_certs: bool = True,
 ) -> Options:
     """
@@ -69,6 +69,9 @@ def add_selenoid_options(
     options.add_argument("--disable-gpu")
     options.add_argument("--ignore-certificate-errors")
     options.add_argument("--disable-infobars")
+    options.add_argument("--no-default-browser-check")
+    options.add_argument("--disable-notifications")
+    options.add_argument("--no-first-run")
 
     # Útil quando o chrome fica carregando infinitamente
     if use_safe_network_flags:
