@@ -16,11 +16,11 @@ def add_selenoid_options(
     session_name: Optional[str] = None,
     screen_resolution: str = "1280x720x24",
     timezone: str = "America/Sao_Paulo",
-    page_load_strategy: str = "none",
+    page_load_strategy: str = "normal",
     download_dir: str = "/home/selenium/Downloads",
     extension_path: Optional[str | Path] = None,
     use_safe_network_flags: bool = False,
-    use_automation_flags: bool = False,
+    use_automation_flags: bool = True,
     accept_insecure_certs: bool = True,
 ) -> Options:
     """
